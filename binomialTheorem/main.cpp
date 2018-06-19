@@ -1,19 +1,8 @@
 #include <iostream>
 #include <cmath>
+#include "../libraries/factorial/factorial.h"
 
 using namespace std;
-
-int calculatesFactorial(int n) {
-	if (n == 0 or n == 1) {
-		return 1;
-	} else {
-		int value = 1;
-		for (int i = 1; i <= n; ++i) {
-			value = value * i;
-		}
-		return value;
-	}
-}
 
 int calculatesCoefficient(int n, int k) {
 	return (calculatesFactorial(n) / (calculatesFactorial(k) * calculatesFactorial(n - k)));
